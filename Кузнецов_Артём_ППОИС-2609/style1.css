@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 520px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.form-description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+}
+
+.account-info {
+    background-color: #ffffff;
+    border-bottom-width: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+}
+
+.account-action {
+    background-color: #f1f3f5;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+legend {
+    color: #555555;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 12px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline-width: 0;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+input:user-valid, select:user-valid {
+    border-color: green;
+}
+
+input:user-invalid {
+    border-color: red;
+}
+
+/* стрелка селекта */
+.select-wrapper {
+    position: relative;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    color: #666666;
+    font-size: 12px;
+}
+
+.checkbox-group a {
+    color: blue;
+    text-decoration-line: underline;
+}
+
+.btn {
+    background-color: #3b5998;
+    background-image: linear-gradient(to bottom, #4c6d8f, #2c3e50);
+    color: white;
+    border-width: 0;
+    padding-top: 12px;
+    padding-right: 25px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-image: linear-gradient(to bottom, #5d81a6, #3b536b);
+}
+
+.foot {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #999999;
+}
+
+/* адаптив до 480px */
+@media screen and (max-width: 479px) {
+    body {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    header, main, footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .account-info {
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+
+    .account-action {
+        padding-top: 20px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
