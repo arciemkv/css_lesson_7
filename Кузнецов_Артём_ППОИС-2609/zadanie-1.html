@@ -39,23 +39,21 @@
           <div class="form-group">
             <label for="phone">Телефон</label>
             <input type="tel" id="phone" name="phone" placeholder="+375 (код оператора) 111-11-11" required 
-                   pattern="\+375\s?\(\d{2}\)\s?\d{3}-\d{2}-\d{2}">
+                   pattern="\+375\s?\(?\d{2}\)?\s?\d{3}-\d{2}-\d{2}">
           </div>
 
           <div class="form-group">
             <label for="country">Страна</label>
-            <div class="select-wrapper">
-              <select id="country" name="country">
-                <option value="Беларусь">Беларусь</option>
-                <option value="Россия">Россия</option>
-                <option value="Украина">Украина</option>
-                <option value="Польша">Польша</option>
-                <option value="Литва">Литва</option>
-                <option value="Латвия">Латвия</option>
-                <option value="Эстония">Эстония</option>
-                <option value="США">США</option>
-              </select>
-            </div>
+            <select id="country" name="country">
+              <option value="Беларусь">Беларусь</option>
+              <option value="Россия">Россия</option>
+              <option value="Украина">Украина</option>
+              <option value="Польша">Польша</option>
+              <option value="Литва">Литва</option>
+              <option value="Латвия">Латвия</option>
+              <option value="Эстония">Эстония</option>
+              <option value="США">США</option>
+            </select>
           </div>
 
           <div class="form-group">
@@ -66,18 +64,19 @@
 
           <div class="form-group">
             <label for="password_confirm">Подтвердите пароль</label>
-            <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required>
+            <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required
+                   pattern=".{8,}">
           </div>
         </fieldset>
 
         <fieldset class="account-action">
           <div class="checkbox-group">
-            <input type="checkbox" id="agree_rules" name="agree_rules" required>
+            <input type="checkbox" id="agree_rules" name="agree_rules" checked required>
             <label for="agree_rules">Отметьте для подтверждения согласия с <a href="/подключение/правила-использования-услуги" target="_blank" rel="noopener">правилами использования услуги</a></label>
           </div>
           
           <div class="checkbox-group">
-            <input type="checkbox" id="agree_data" name="agree_data" required>
+            <input type="checkbox" id="agree_data" name="agree_data" checked required>
             <label for="agree_data">Отметьте для согласия на обработку персональных данных в соответствии с <a href="/соглашение-об-обработке-персональных-данных" target="_blank" rel="noopener">Соглашением об обработке персональных данных</a></label>
           </div>
 
